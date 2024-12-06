@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      header {
+        color: #45ffca;
+        padding: 1rem 2rem;
+        text-align: center;
+        margin-bottom: auto;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.5;
+        color: #1a1a1a;
+        background-color: #0073e6;
+        background-image: url("gate da syllabus bg.avif");
+        background-size: cover; /* Ensures the image covers the whole screen */
+        background-position: center center; /* Centers the image */
+        background-attachment: fixed;
+        background-repeat: repeat; /* Prevents the image from repeating */
+        font-weight: bold;
+        font-size: 25px;
+      }
+      /* Details and Summary */
+
+      .main-details {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 0.5rem;
+        background-color: #f9f9f9;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+        overflow: hidden;
+      }
+
+      .main-summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        position: relative; /* Position relative to place the chevron */
+      }
+
+      .main-summary:hover {
+        background-color: #ffb200;
+      }
+
+      .main-summary::marker,
+      .main-summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .main-summary::after {
+        content: "▶"; /* Right-facing chevron */
+        font-size: 18px;
+        transition: transform 0.3s ease; /* Smooth transition for rotation */
+      }
+
+      .main-details[open] .main-summary::after {
+        content: "▼"; /* Downward-facing chevron when open */
+        transform: rotate(-2deg); /* Optional: if you want a rotating effect */
+
+      }
+
+      .main-details[open] .main-summary ~ * {
+        animation: fadeIn 0.5s ease-in-out;
+        margin:20px;
+      }
+
+      .main-details[open] .main-summary {
+        background-color: #ffb200;
+
+      }
+
+      
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      /* Paragraph */
+      p {
+        padding: 1rem;
+        margin: 0;
+        line-height: 1.5;
+        color: #333;
+      }
+
+      a {
+        display: block; /* Makes the <a> behave like a list item */
+        text-decoration: none;
+        margin-left:20px; /* Adjust the indent to match a list */
+        padding: 5px 0; /* Add spacing similar to list items */
+        color: #0073e6;
+      }
+      a:visited {
+        color: #0073e6;
+      }
+
+      a:active {
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Data Science and AI Curriculum</h1>
+    </header>
+
+    <main>
+      <details class="main-details">
+        <summary class="main-summary">Probability and Statistics</summary>
+
+        <a href="#counting" class="topic-link"
+          >Counting (Permutations and Combinations)</a
+        >
+
+        <a href="#probability-axioms" class="topic-link">Probability Axioms</a>
+
+        <a href="#sample-space" class="topic-link">Sample Space and Events</a>
+
+        <a href="#independent-events" class="topic-link"
+          >Independent and Mutually Exclusive Events</a
+        >
+
+        <a href="#probability-types" class="topic-link"
+          >Probability Types (Marginal, Conditional, Joint)</a
+        >
+
+        <a href="#bayes-theorem" class="topic-link">Bayes Theorem</a>
+
+        <a href="#statistical-measures" class="topic-link"
+          >Statistical Measures</a
+        >
+
+        <details class="sub-details">
+          <summary class="sub-summary">Random Variables</summary>
+
+          <details class="sub-details">
+            <summary class="sub-summary">Discrete Random Variables</summary>
+
+            <a href="#Uniform Distribution" class="topic-link"
+              >Uniform Distribution</a
+            >
+
+            <a href="#Bernoulli Distribution" class="topic-link"
+              >Bernoulli Distribution</a
+            >
+
+            <a href="Binomial Distribution" class="topic-link"
+              >Binomial Distribution</a
+            >
+          </details>
+
+          <details class="sub-details">
+            <summary class="sub-summary">Continuous Random Variables</summary>
+
+            <a href="Uniform Distribution" class="topic-link"
+              >Uniform Distribution</a
+            >
+
+            <a href="Exponential Distribution" class="topic-link"
+              >Exponential Distribution</a
+            >
+
+            <a href="Poisson Distribution" class="topic-link"
+              >Poisson Distribution</a
+            >
+
+            <a href="Normal Distribution" class="topic-link"
+              >Normal Distribution</a
+            >
+
+            <a href="Standard Normal Distribution" class="topic-link"
+              >Standard Normal Distribution</a
+            >
+
+            <a href="t-Distribution" class="topic-link">t-Distribution</a>
+
+            <a href="Chi-squared Distribution" class="topic-link"
+              >Chi-squared Distribution</a
+            >
+          </details>
+        </details>
+
+        <a href="Cumulative Distribution Function" class="topic-link"
+          >Cumulative Distribution Function</a
+        >
+
+        <a href="Conditional PDF" class="topic-link">Conditional PDF</a>
+
+        <a href="Central Limit Theorem" class="topic-link"
+          >Central Limit Theorem</a
+        >
+
+        <a href="Statistical Tests" class="topic-link">Statistical Tests</a>
+      </details>
+
+      <details class="main-details">
+        <summary class="main-summary">Linear Algebra</summary>
+        <a href="#" class="topic-link">Vector Space, Subspaces</a>
+        <a href="#" class="topic-link"
+          >Linear Dependence and Independence of Vectors</a
+        >
+        <details>
+          <summary>Matrices</summary>
+          <a href="#" class="topic-link">Projection matrix</a>
+          <a href="#" class="topic-link">Orthogonal matrix</a>
+          <a href="#" class="topic-link">Idempotent matrix</a>
+          <a href="#" class="topic-link">Partition matrix</a>
+        </details>
+        <a href="#" class="topic-link">Quadratic Forms</a>
+        <a href="#" class="topic-link"
+          >Systems of Linear Equations and Solutions</a
+        >
+        <a href="#" class="topic-link">Gaussian Elimination</a>
+        <a href="#" class="topic-link">Eigenvalues and Eigenvectors</a>
+        <a href="#" class="topic-link">Determinant, Rank, Nullity</a>
+        <a href="#" class="topic-link">Projections</a>
+        <a href="#" class="topic-link">LU Decomposition</a>
+        <a href="#" class="topic-link">Singular Value Decomposition</a>
+      </details>
+
+      <details class="main-details">
+        <summary class="main-summary">Calculus and Optimization</summary>
+
+        <a href="#" class="topic-link">Functions of a Single Variable</a>
+
+        <a href="#" class="topic-link"
+          >Limit, Continuity, and Differentiability</a
+        >
+
+        <a href="#" class="topic-link">Taylor Series</a>
+        <a href="#" class="topic-link">Maxima and Minima</a>
+
+        <a href="#" class="topic-link"
+          >Optimization Involving a Single Variable</a
+        >
+      </details>
+
+      <details class="main-details">
+        <summary class="main-summary">
+          Programming, Data Structures and Algorithms
+        </summary>
+
+        <a href="#" class="topic-link">Programming in Python</a>
+
+        <details>
+          <summary>Basic Data Structures</summary>
+
+          <a href="#" class="topic-link">Stacks</a>
+          <a href="#" class="topic-link">Queues</a>
+          <a href="#" class="topic-link">Linked Lists</a>
+          <a href="#" class="topic-link">Trees</a>
+          <a href="#" class="topic-link">Hash Tables</a>
+        </details>
+
+        <details>
+          <summary>Search Algorithms</summary>
+
+          <a href="#" class="topic-link">Linear Search</a>
+          <a href="#" class="topic-link">Binary Search</a>
+        </details>
+
+        <details>
+          <summary>Sorting Algorithms</summary>
+
+          <a href="#" class="topic-link">Selection Sort</a>
+          <a href="#" class="topic-link">Bubble Sort</a>
+          <a href="#" class="topic-link">Insertion Sort</a>
+        </details>
+
+        <details>
+          <summary>Divide and Conquer</summary>
+
+          <a href="#" class="topic-link">Mergesort</a>
+          <a href="#" class="topic-link">Quicksort</a>
+        </details>
+
+        <a href="#" class="topic-link">Introduction to Graph Theory</a>
+
+        <details>
+          <summary>Basic Graph Algorithms</summary>
+
+          <a href="#" class="topic-link">Traversals</a>
+          <a href="#" class="topic-link">Shortest Path</a>
+        </details>
+      </details>
+
+      <details class="main-details">
+        <summary class="main-summary">
+          Database Management and Warehousing
+        </summary>
+
+        <a href="#" class="topic-link">ER-Model</a>
+
+        <details>
+          <summary>Relational Model</summary>
+
+          <a href="#" class="topic-link">Relational Algebra</a>
+          <a href="#" class="topic-link">Tuple Calculus</a>
+          <a href="#" class="topic-link">SQL</a>
+          <a href="#" class="topic-link">Integrity Constraints</a>
+          <a href="#" class="topic-link">Normal Form</a>
+          <a href="#" class="topic-link">File Organization</a>
+          <a href="#" class="topic-link">Indexing</a>
+          <a href="#" class="topic-link">Data Types</a>
+
+          <details>
+            <summary>Data Transformation</summary>
+
+            <a href="#" class="topic-link">Normalization</a>
+            <a href="#" class="topic-link">Discretization</a>
+            <a href="#" class="topic-link">Sampling</a>
+            <a href="#" class="topic-link">Compression</a>
+          </details>
+        </details>
+
+        <details>
+          <summary>Data Warehouse Modelling</summary>
+
+          <a href="#" class="topic-link"
+            >Schema for Multidimensional Data Models</a
+          >
+          <a href="#" class="topic-link">Concept Hierarchies</a>
+
+          <details>
+            <summary>Measures</summary>
+
+            <a href="#" class="topic-link">Categorization</a>
+            <a href="#" class="topic-link">Computations</a>
+          </details>
+        </details>
+      </details>
+
+      <details class="main-details">
+        <summary class="main-summary">Machine Learning</summary>
+
+        <details>
+          <summary>Supervised Learning</summary>
+
+          <a href="#" class="topic-link"
+            >Regression and Classification Problems</a
+          >
+
+          <details>
+            <summary>Regression</summary>
+
+            <a href="#" class="topic-link">Simple Linear Regression</a>
+            <a href="#" class="topic-link">Linear Regression</a>
+            <a href="#" class="topic-link">Multiple Linear Regression</a>
+            <a href="#" class="topic-link">Ridge Regression</a>
+            <a href="#" class="topic-link">Logistic Regression</a>
+          </details>
+
+          <details>
+            <summary>Classification</summary>
+
+            <a href="#" class="topic-link">k-Nearest Neighbors</a>
+            <a href="#" class="topic-link">Naive Bayes Classifier</a>
+            <a href="#" class="topic-link">Linear Discriminant Analysis</a>
+            <a href="#" class="topic-link">Support Vector Machine</a>
+            <a href="#" class="topic-link">Decision Trees</a>
+            <a href="#" class="topic-link">Bias-Variance Trade-off</a>
+            <a href="#" class="topic-link">Cross-validation Methods</a>
+            <a href="#" class="topic-link"
+              >Leave-one-out (LOO) Cross-validation</a
+            >
+            <a href="#" class="topic-link">k-folds Cross-validation</a>
+            <a href="#" class="topic-link">Multilayer Perceptron</a>
+            <a href="#" class="topic-link">Feed-forward Neural Network</a>
+          </details>
+        </details>
+
+        <details>
+          <summary>Unsupervised Learning</summary>
+
+          <a href="#" class="topic-link">Clustering Algorithms</a>
+          <a href="#" class="topic-link">k-means/k-medoids</a>
+          <a href="#" class="topic-link">Hierarchical Clustering</a>
+          <a href="#" class="topic-link">Top-down Clustering</a>
+          <a href="#" class="topic-link">Bottom-up Clustering</a>
+          <a href="#" class="topic-link">Single-linkage</a>
+          <a href="#" class="topic-link">Multiple Linkage</a>
+          <a href="#" class="topic-link">Dimensionality Reduction</a>
+          <a href="#" class="topic-link">Principal Component Analysis (PCA)</a>
+        </details>
+      </details>
+
+      <details class="main-details">
+        <summary class="main-summary">AI</summary>
+
+        <details>
+          <summary>Search</summary>
+
+          <a href="#" class="topic-link">Informed</a>
+          <a href="#" class="topic-link">Uninformed</a>
+          <a href="#" class="topic-link">Adversarial</a>
+        </details>
+
+        <details>
+          <summary>Logic</summary>
+
+          <a href="#" class="topic-link">Propositional</a>
+          <a href="#" class="topic-link">Predicate</a>
+        </details>
+
+        <details>
+          <summary>Reasoning and Inference</summary>
+
+          <a href="#" class="topic-link"
+            >Conditional Independence Representation</a
+          >
+          <a href="#" class="topic-link"
+            >Exact Inference through Variable Elimination</a
+          >
+          <a href="#" class="topic-link"
+            >Approximate Inference through Sampling</a
+          >
+        </details>
+      </details>
+    </main>
+  </body>
+</html>
